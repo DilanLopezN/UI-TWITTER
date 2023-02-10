@@ -11,6 +11,7 @@ import {
 } from 'phosphor-react'
 import './styles/layout.css'
 import tweetLogo from './assets/tweetLogo.svg'
+import { Tweet } from './components/Tweet'
 export function App() {
   return (
     <div className="layout">
@@ -74,6 +75,10 @@ export function App() {
         </form>
 
         <div className="separator" />
+
+        <Tweet />
+        <Tweet />
+        <Tweet />
       </div>
     </div>
   )
