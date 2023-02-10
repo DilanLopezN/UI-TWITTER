@@ -5,6 +5,7 @@ import { Sidebar } from './components/Sidebar'
 import { Header } from './components/Header'
 import { Separator } from './components/Separator'
 export function App() {
+  const tweets = ['Tweet Teste 1', 'Tweet Teste 2', 'Tweet Teste 3']
   return (
     <div className="layout">
       <Sidebar />
@@ -25,9 +26,9 @@ export function App() {
 
           <Separator />
 
-          <Tweet />
-          <Tweet />
-          <Tweet />
+          {tweets.map(tweet => {
+            return <Tweet content={tweet} />
+          })}
         </main>
       </div>
     </div>

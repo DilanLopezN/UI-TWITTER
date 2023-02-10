@@ -1,6 +1,10 @@
 import { ChatCircle, ArrowsClockwise, Heart } from 'phosphor-react'
 import '../styles/tweet.css'
-export function Tweet() {
+
+interface TweetProps {
+  content: string
+}
+export function Tweet({ content }: TweetProps) {
   return (
     <a href="#" className="tweet">
       <img
@@ -12,10 +16,7 @@ export function Tweet() {
           <strong>Dilan lopez</strong>
           <span>@dilanln</span>
         </div>
-        <p>
-          O React é uma biblioteca front-end JavaScript de código aberto <br />{' '}
-          com foco em criar interfaces de usuário em páginas web
-        </p>
+        <p>{content}</p>
         <div className="tweetContentFooter">
           <button type="submit">
             <ChatCircle />
