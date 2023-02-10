@@ -1,19 +1,15 @@
-import { Sparkle } from 'phosphor-react'
 import './styles/layout.css'
 
 import { Tweet } from './components/Tweet'
 import { Sidebar } from './components/Sidebar'
+import { Header } from './components/Header'
 export function App() {
   return (
     <div className="layout">
       <Sidebar />
       <div className="content">
         <main className="timeLine"></main>
-        <div className="timeLineHeader">
-          Home
-          <Sparkle />
-        </div>
-
+        <Header />
         <form className="newTweetForm">
           <label htmlFor="tweet">
             <img

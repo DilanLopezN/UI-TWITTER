@@ -8,7 +8,7 @@ import {
   User,
   DotsThreeCircle
 } from 'phosphor-react'
-import '../styles/layout.css'
+import '../styles/sidebar.css'
 import tweetLogo from '../assets/tweetLogo.svg'
 
 export function Sidebar() {
