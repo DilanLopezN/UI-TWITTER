@@ -6,7 +6,8 @@ import {
   BookmarkSimple,
   FileText,
   User,
-  DotsThreeCircle
+  DotsThreeCircle,
+  Sparkle
 } from 'phosphor-react'
 import './styles/layout.css'
 import tweetLogo from './assets/tweetLogo.svg'
@@ -53,7 +54,27 @@ export function App() {
           Tweet
         </button>
       </aside>
-      <div className="content">content</div>
+      <div className="content">
+        <main className="timeLine"></main>
+        <div className="timeLineHeader">
+          Home
+          <Sparkle />
+        </div>
+
+        <form className="newTweetForm">
+          <label htmlFor="tweet">
+            <img
+              src="https://avatars.githubusercontent.com/u/92648265?v=4"
+              alt="imagem do usuario"
+            />
+            <textarea id="tweet" placeholder=" What's Happening? " />
+          </label>
+
+          <button type="submit">Tweet</button>
+        </form>
+
+        <div className="separator" />
+      </div>
     </div>
   )
 }
