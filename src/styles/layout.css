@@ -45,7 +45,17 @@
   align-items: center;
   font-size: 1.25rem;
   font-weight: 700;
+  gap: 1.25rem;
 }
+.mainNavigation a svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.mainNavigation a.active {
+  color: var(--twitter-blue);
+}
+
 .content {
   border-left: 1px solid #ebeef8;
   border-right: 1px solid #ebeef8;
