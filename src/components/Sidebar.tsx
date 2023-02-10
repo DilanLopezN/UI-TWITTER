@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import {
   House,
   Hash,
@@ -17,10 +17,10 @@ export function Sidebar() {
     <aside className="sidebar">
       <img className="logo" src={tweetLogo} alt="Logo" />
       <nav className="mainNavigation">
-        <Link to="/" className="active">
+        <NavLink to="/">
           <House weight="fill" />
           Home
-        </Link>
+        </NavLink>
         <a href="">
           <Hash />
           Explore
