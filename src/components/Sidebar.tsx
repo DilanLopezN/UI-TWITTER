@@ -11,7 +11,7 @@ import {
   Pencil
 } from 'phosphor-react'
 import '../styles/sidebar.css'
-import tweetLogo from '../assets/tweetLogo.svg'
+import tweetLogo from '../assets/tweetlogo.svg'
 
 export function Sidebar() {
   return (
