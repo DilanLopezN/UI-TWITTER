@@ -1,31 +1,10 @@
 .layout {
   margin: 0 auto;
   max-width: 1000px;
+  min-height: 100vh;
 
   display: grid;
   grid-template-columns: 300px 1fr;
-}
-
-.mainNavigation {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.mainNavigation a {
-  display: flex;
-  align-items: center;
-  font-size: 1.25rem;
-  font-weight: 700;
-  gap: 1.25rem;
-}
-.mainNavigation a svg {
-  width: 2rem;
-  height: 2rem;
-}
-
-.mainNavigation a.active {
-  color: var(--twitter-blue);
 }
 
 .content {
@@ -80,4 +59,10 @@
 
 .newTweetForm button[type='submit']:hover {
   filter: brightness(0.9);
+}
+
+@media (max-width: 780px) {
+  .layout {
+    grid-template-columns: 80px 1fr;
+  }
 }

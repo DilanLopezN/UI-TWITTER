@@ -2,15 +2,10 @@ import { FormEvent, useState } from 'react'
 import { Header } from '../components/Header'
 import { Separator } from '../components/Separator'
 import { Tweet } from '../components/Tweet'
+import { PaperPlaneRight } from 'phosphor-react'
 import '../styles/status.css'
 
 export function Status() {
-  const awnsers = [
-    'Concordo...',
-    'Faz sentido até.',
-    'Parabéns pelo progresso!'
-  ]
-
   const [newAwnser, setNewAnwser] = useState('')
   const [answers, setAnswers] = useState([
     'Concordo...',
@@ -38,17 +33,22 @@ export function Status() {
           />
           <textarea
             id="tweet"
+            value={newAwnser}
             placeholder=" Tweet your awnser "
             onChange={event => {
               setNewAnwser(event.target.value)
+              console.log(newAwnser)
             }}
           />
         </label>
 
-        <button type="submit">Awnser</button>
+        <button type="submit">
+          <PaperPlaneRight />
+          <span> Awnser</span>
+        </button>
       </form>
 
-      {awnsers.map(awnser => {
+      {answers.map(awnser => {
         return <Tweet key={awnser} content={awnser} />
       })}
     </main>
